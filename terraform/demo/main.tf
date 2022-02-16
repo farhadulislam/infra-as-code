@@ -2,10 +2,10 @@
 ###### PROVIDERS
 #################
 
-provider "aws"{
-    access_key = "DUMMY"
-    secret_key = "DUMMY"
-    region = "us-east-1"
+provider "aws" {
+  access_key = "DUMMY"
+  secret_key = "DUMMY"
+  region     = "us-east-1"
 }
 
 
@@ -13,8 +13,8 @@ provider "aws"{
 ###### DATA
 #################
 
-data "aws_ssm_provider" "ami"{
-    name = "/aws/service/ami-amazon-linux-latest/amzn2-"
+data "aws_ssm_provider" "ami" {
+  name = "/aws/service/ami-amazon-linux-latest/amzn2-"
 }
 
 
@@ -25,6 +25,6 @@ data "aws_ssm_provider" "ami"{
 
 # NETWORKING #
 
-resource "aws_vpc" "vpc"{
-    cidr_block = "10.0.0.0/16"
+resource "aws_vpc" "vpc" {
+  cidr_block = "10.0.0.0/16"
 }
